@@ -1,14 +1,9 @@
 <?php
 
-class Product
-{
-    // 税率
+class Product {
     const TAX_RATE = 0.1;
-
-    // 金額
     private $price = 0;
-   
-    // 価格設定
+
     public function setPrice( $price ) {
         if ( is_numeric ( $price ) ) {
             $this->price = $price;
@@ -77,9 +72,9 @@ $get = $get_tax->getTax();
             <input type = "submit" value = "計算">
         </form>
         <?php 
-            echo floor($price) . '<br>';
-            echo floor($excluded) . '<br>';
-            echo floor($get) . '<br>';    
+            echo '税込価格: ' . floor($price) . '<br>';
+            echo '請求金額: ' . floor($excluded) . '<br>';
+            echo '消費税額: ' . floor($get) . '<br>';    
         ?>
     </body>
 </html>
