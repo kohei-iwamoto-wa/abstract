@@ -9,7 +9,7 @@ class Product {
             $this->price = $price;
             
         } else {
-            throw new LogicException('半角数字で入力してください。');
+            throw new LogicException( '半角数字で入力してください。' );
         }
         return $price;
     }
@@ -19,7 +19,7 @@ class Product {
             $this->name = $name;
 
         } else {
-            throw new LogicException('数値は入力しないで');
+            throw new LogicException( '数値は入力しないで' );
         }
         return $name;
     }
@@ -72,9 +72,9 @@ $get = $get_tax->getTax();
             <input type = "submit" value = "計算">
         </form>
         <?php 
-            echo '税込価格: ' . floor($price) . '<br>';
-            echo '請求金額: ' . floor($excluded) . '<br>';
-            echo '消費税額: ' . floor($get) . '<br>';    
+            echo '税込価格: ' . floor( $price ) . '<br>';
+            echo '請求金額: ' . floor( $excluded ) . '<br>';
+            echo '消費税額: ' . floor( $get ) . '<br>';    
         ?>
     </body>
 </html>
